@@ -9,7 +9,6 @@ module.exports = {
     'plugin:@typescript-eslint/recommended',
     'plugin:react/recommended',
     'plugin:i18next/recommended',
-
     'plugin:prettier/recommended',
   ],
   overrides: [
@@ -17,6 +16,10 @@ module.exports = {
       env: { node: true },
       files: ['.eslintrc.{js,cjs}'],
       parserOptions: { sourceType: 'script' },
+    },
+    {
+      files: ['**/src/**/*.spec.{ts,tsx}'],
+      rules: { 'i18next/no-literal-string': 'off' },
     },
   ],
   parser: '@typescript-eslint/parser',
@@ -40,7 +43,13 @@ module.exports = {
         ExportDeclaration: { multiline: true, minProperties: 3 },
       },
     ],
-    'i18next/no-literal-string': ['error', { markupOnly: true }],
+    'i18next/no-literal-string': [
+      'error',
+      {
+        markupOnly: true,
+        ignoreAttribute: ['data-testid'],
+      },
+    ],
   },
   globals: { __IS_DEV__: true },
 };
