@@ -9,7 +9,7 @@ module.exports = {
     'plugin:@typescript-eslint/recommended',
     'plugin:react/recommended',
     'plugin:i18next/recommended',
-    'plugin:prettier/recommended',
+    'prettier',
   ],
   overrides: [
     {
@@ -47,7 +47,7 @@ module.exports = {
       'error',
       {
         markupOnly: true,
-        ignoreAttribute: ['data-testid'],
+        ignoreAttribute: ['data-testid', 'to'],
       },
     ],
   },
