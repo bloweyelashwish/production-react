@@ -10,7 +10,7 @@ export default {
   argTypes: { backgroundColor: { control: 'color' } },
 } as ComponentMeta<typeof MainPage>;
 
-const Template: ComponentStory<typeof MainPage> = (args) => (
+const Template: ComponentStory<typeof MainPage> = (args: object) => (
   <MainPage {...args} />
 );
 
