@@ -9,7 +9,7 @@ module.exports = {
     'plugin:@typescript-eslint/recommended',
     'plugin:react/recommended',
     'plugin:i18next/recommended',
-    'prettier',
+    'plugin:prettier/recommended',
   ],
   overrides: [
     {
@@ -34,15 +34,6 @@ module.exports = {
     quotes: ['error', 'single'],
     semi: ['error', 'always'],
     'react/react-in-jsx-scope': 'off',
-    'object-curly-newline': [
-      'error',
-      {
-        ObjectExpression: { multiline: true, minProperties: 3 },
-        ObjectPattern: { multiline: true },
-        ImportDeclaration: { multiline: true, minProperties: 3 },
-        ExportDeclaration: { multiline: true, minProperties: 3 },
-      },
-    ],
     'i18next/no-literal-string': [
       'error',
       {
