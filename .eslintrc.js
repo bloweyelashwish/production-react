@@ -18,8 +18,8 @@ module.exports = {
       parserOptions: { sourceType: 'script' },
     },
     {
-      files: ['**/src/**/*.spec.{ts,tsx}'],
-      rules: { 'i18next/no-literal-string': 'off' },
+      files: ['**/src/**/*.{spec,stories}.{ts,tsx}'],
+      rules: { 'i18next/no-literal-string': 'off', 'max-len': 'off' },
     },
   ],
   parser: '@typescript-eslint/parser',
@@ -27,7 +27,7 @@ module.exports = {
     ecmaVersion: 'latest',
     sourceType: 'module',
   },
-  plugins: ['@typescript-eslint', 'react', 'i18next'],
+  plugins: ['@typescript-eslint', 'react', 'i18next', 'react-hooks'],
   rules: {
     indent: 'off',
     'linebreak-style': ['error', 'unix'],
@@ -41,6 +41,8 @@ module.exports = {
         ignoreAttribute: ['data-testid', 'to'],
       },
     ],
+    'react-hooks/rules-of-hooks': 'error',
+    'react-hooks/exhaustive-deps': 'error',
   },
   globals: { __IS_DEV__: true },
 };
