@@ -27,8 +27,20 @@ module.exports = {
     ecmaVersion: 'latest',
     sourceType: 'module',
   },
-  plugins: ['@typescript-eslint', 'react', 'i18next', 'react-hooks'],
+  plugins: [
+    '@typescript-eslint',
+    'react',
+    'i18next',
+    'react-hooks',
+    'prettier',
+  ],
   rules: {
+    'prettier/prettier': [
+      'error',
+      {
+        endOfLine: 'auto',
+      },
+    ],
     indent: 'off',
     'linebreak-style': ['error', 'unix'],
     quotes: ['error', 'single'],
